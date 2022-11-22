@@ -1,23 +1,18 @@
-import { List, Datagrid, TextField, EmailField } from 'react-admin';
+import { Grid } from "@nextui-org/react";
+import {Cards} from '../Card/Card'
 
-function CardView() {
-    return (
-        <>
-            <List>
-                <Datagrid rowClick="edit">
-                    <TextField source="id" />
-                    <TextField source="name" />
-                    <TextField source="username" />
-                    <EmailField source="email" />
-                    <TextField source="address.street" />
-                    <TextField source="phone" />
-                    <TextField source="website" />
-                    <TextField source="company.name" />
-                </Datagrid>
-            </List>
-        </>
-
-    );
+export default function CardView() {
+  return (
+    <Grid.Container gap={2} justify="center">
+      <Grid xs={12} sm={4}>
+        <Cards />
+      </Grid>
+      <Grid xs={12} sm={4}>
+        <Cards />
+      </Grid>
+      <Grid xs={12} sm={4}>
+        <Cards />
+      </Grid>
+    </Grid.Container>
+  );
 }
-
-export default CardView;
