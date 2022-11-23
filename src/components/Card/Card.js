@@ -1,8 +1,8 @@
-import { Card, Col, Text } from "@nextui-org/react";
+import { Card, Col, Text, Badge } from "@nextui-org/react";
 
 export const Cards = () => (
   <Card css={{ bg: "$black", w: "90%" }}>
-    <Card.Header css={{ position: "absolute", zIndex: 1, top: 5, marginBottom:'20%' }}>
+    <Card.Header css={{ position: "absolute", zIndex: 1, top: 5, marginBottom: '20%' }}>
       <Col>
         <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
           MacBook Air
@@ -19,5 +19,9 @@ export const Cards = () => (
       objectFit="cover"
       alt="Card image background"
     />
+    <Badge color="success" isSquared style={{marginBottom:'5px', marginLeft:'5px'}}>
+      Example
+    </Badge>
+
   </Card>
 );
